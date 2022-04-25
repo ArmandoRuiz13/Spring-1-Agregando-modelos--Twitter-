@@ -29,6 +29,6 @@ describe('Pruebas User JS ',()=> {
 
         user.setBio = "NewBio"
         // valores esperados
-        expect(user.Bio).toBe("NewBio")
+        expect(user.bio).toBe("NewBio")
     })
 })

@@ -13,8 +13,8 @@ class User{
     set setUsername(newUsername){
         this.username = newUsername
     }
-    set setBio(newBio){
-        this.username = newBio
+    set setBio(newbio){
+        this.bio = newbio
     }
 }
 module.exports = User
