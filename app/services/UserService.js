@@ -11,8 +11,8 @@ class UserService{
         return user.username = newUsername
 
     }
-    // static getAllusernames(user1,user2,user3){
-    //     return [user1[1],user2[1],user3[1]]
-    // }
+    static getAllusernames(user1,user2,user3){
+        return User.map(user1.username,user2[1],user3.username)
+    }
 }
 module.exports = UserService
