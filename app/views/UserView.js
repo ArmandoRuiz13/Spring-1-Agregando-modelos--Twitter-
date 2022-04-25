@@ -5,6 +5,13 @@ class UserView{
         if(payload === null){
             return {error: "payload no existe"}
         }
+        else if((typeof payload.username !== 'string' ||
+        payload.username === null) || (typeof payload.name !== 'string' ||
+        payload.name === null) || (typeof payload.id !== 'number' ||
+        payload.id === null)){
+            return {error: 'Necesitan tener un valor valido'}
+        }
+
     }
 }
 module.exports = UserView
