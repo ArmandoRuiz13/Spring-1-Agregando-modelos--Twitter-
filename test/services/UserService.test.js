@@ -1,3 +1,4 @@
+const User = require('../../app/models/User')
 const UserService = require('./../../app/services/UserService')
 
 describe("User service testeo",() => {
@@ -7,5 +8,10 @@ describe("User service testeo",() => {
          expect(user.name).toBe("Armando")
          expect(user.id).toBe(1)
          expect(user.bio).not.toBeUndefined()
+    })
+    test("2. Agregegando getter para recibir todos los datos de UserService", () => {
+        const user = UserService.create(1,"Armandobolt13","Armando")
+        const userInfoInlist = UserService.getInfo(user)
+        expect(userInfoInlist[0]).toBe(1)
     })
 })
