@@ -1,4 +1,3 @@
-const { TestWatcher } = require('jest')
 const User= require('./../../app/models/User')
 
 describe('Pruebas User JS ',()=> {
