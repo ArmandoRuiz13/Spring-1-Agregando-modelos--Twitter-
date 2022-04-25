@@ -21,4 +21,14 @@ describe('Pruebas User JS ',()=> {
         // valores esperados
         expect(user.getUsername).toBe("Armandobolt13")
     })
+    test('Requerimiento 4: Agregando setters', () =>{
+        const user = new User(1,"Armandobolt13","Armando","Bio")
+        user.setUsername = "Armandobolt"
+        // valores esperados
+        expect(user.username).toBe("Armandobolt")
+
+        user.setBio = "NewBio"
+        // valores esperados
+        expect(user.Bio).toBe("NewBio")
+    })
 })

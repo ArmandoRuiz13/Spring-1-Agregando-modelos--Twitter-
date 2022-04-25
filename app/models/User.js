@@ -10,5 +10,11 @@ class User{
     get getUsername(){ // get nos ayuda a obtener informacion especifica
         return this.username
     }
+    set setUsername(newUsername){
+        this.username = newUsername
+    }
+    set setBio(newBio){
+        this.username = newBio
+    }
 }
 module.exports = User
