@@ -12,23 +12,26 @@ describe('Pruebas User JS ',()=> {
     })
     test('Requerimiento 2: Fechas en atributos de user', () =>{
         const user = new User(1,"Armandobolt13","Armando","Bio")
-        // valores esperados
+
         expect(user.dateCreated).not.toBeUndefined() //Verifica que el valor no sea undefined
         expect(user.lastUpdate).not.toBeUndefined()
     })
     test('Requerimiento 3: Agregando getters', () =>{
         const user = new User(1,"Armandobolt13","Armando","Bio")
-        // valores esperados
+
         expect(user.getUsername).toBe("Armandobolt13")
+        expect(user.getBio).toBe("Bio")
+        expect(user.getdateCreated).not.toBeUndefined()
+        expect(user.getlastUpdate).not.toBeUndefined()        
     })
     test('Requerimiento 4: Agregando setters', () =>{
         const user = new User(1,"Armandobolt13","Armando","Bio")
         user.setUsername = "Armandobolt"
-        // valores esperados
+     
         expect(user.username).toBe("Armandobolt")
 
         user.setBio = "NewBio"
-        // valores esperados
+
         expect(user.bio).toBe("NewBio")
     })
 })

@@ -10,7 +10,16 @@ class User{
     get getUsername(){ // get nos ayuda a obtener informacion especifica
         return this.username
     }
-    set setUsername(newUsername){
+    get getBio(){ // get nos ayuda a obtener informacion especifica
+        return this.bio
+    }
+    get getdateCreated(){ // get nos ayuda a obtener informacion especifica
+        return this.dateCreated
+    }
+    get getlastUpdate(){ // get nos ayuda a obtener informacion especifica
+        return this.lastUpdate
+    }
+    set setUsername(newUsername){ //Nos ayuda a remplazar un valor
         this.username = newUsername
     }
     set setBio(newbio){
