@@ -17,4 +17,12 @@ describe("Test para UserView sprint 3", () => {
         const result = UserView.createUser(payload)
         expect(result.error).toMatch(/Necesitan tener un valor valido/)
     })
+    test("Requerimiento 4- Crear un usuario que tenga paylaod validos", () =>{
+        const payload = {username: "Username", id: 1, name: "name"}
+        const result = UserView.createUser(payload)
+         expect(result.name).toBe("name")
+         expect(result.username).toBe("Username")
+         expect(result.id).toBe(1)
+         
+    })
 })
