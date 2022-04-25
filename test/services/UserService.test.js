@@ -9,9 +9,17 @@ describe("User service testeo",() => {
          expect(user.id).toBe(1)
          expect(user.bio).not.toBeUndefined()
     })
-    test("2. Agregegando getter para recibir todos los datos de UserService", () => {
+    // test("2. Agregegando getter para recibir todos los datos de UserService", () => {
+    //     const user = UserService.create(1,"Armandobolt13","Armando")
+    //     const userInfoInlist = UserService.getInfo(user)
+    //     expect(userInfoInlist[0]).toBe(1)
+    //     expect(userInfoInlist[1]).toBe("Armandobolt13")
+    //     expect(userInfoInlist[2]).toBe("Armando")
+    //     expect(userInfoInlist[3]).toBe("Sin bio")
+    // })
+    test("3. Update username", () => {
         const user = UserService.create(1,"Armandobolt13","Armando")
-        const userInfoInlist = UserService.getInfo(user)
-        expect(userInfoInlist[0]).toBe(1)
+        UserService.updateUserUsername(user, "Armandobolt")
+        expect(user.username).toBe("Armandobolt")
     })
 })
