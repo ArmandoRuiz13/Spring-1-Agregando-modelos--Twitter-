@@ -16,4 +16,9 @@ describe('Pruebas User JS ',()=> {
         expect(user.dateCreated).not.toBeUndefined() //Verifica que el valor no sea undefined
         expect(user.lastUpdate).not.toBeUndefined()
     })
+    test('Requerimiento 3: Agregando getters', () =>{
+        const user = new User(1,"Armandobolt13","Armando","Bio")
+        // valores esperados
+        expect(user.getUsername).toBe("Armandobolt13")
+    })
 })
